@@ -85,6 +85,6 @@ int main(void) {
 
 Comandi da terminale per compilarlo: 
 ```sh
-gcc -o hello_world hello_world.c # compilazione
-./hello_world # esecuzione
+gcc hello_world.c # compilazione
+./a.out # esecuzione
 ```
