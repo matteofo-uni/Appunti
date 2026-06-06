@@ -18,12 +18,19 @@ void Queue::enqueue(int value) {
 }
 
 int Queue::dequeue() {
-    Node* tmp = this->head;
+    if (this->empty()) {
+        throw std::runtime_error("Queue underflow");
+    }
 
+    Node* tmp = this->head;
     int val = tmp->value;
     this->head = this->head->next;
-    delete tmp;
+    
+    if (this->head == nullptr) {
+        this->tail = nullptr;
+    }
 
+    delete tmp;
     return val;
 }
 

@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <print>
 #include "list.hpp"
 
 class Queue {

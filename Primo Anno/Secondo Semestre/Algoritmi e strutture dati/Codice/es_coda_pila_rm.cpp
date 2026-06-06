@@ -7,6 +7,8 @@ void remove(Queue& q, Stack& s) {
     Queue tmp;
     Stack stmp;
 
+    int i = 0;
+
     while (!s.empty()) {
         int sv = s.pop();
         stmp.push(sv);
@@ -25,6 +27,33 @@ void remove(Queue& q, Stack& s) {
 
     while (!stmp.empty()) {
         s.push(stmp.pop());
+    }
+}
+
+void remove_ex(Queue& q, Stack& s) {
+    Queue tmp;
+
+    while (!s.empty()) {
+        int r = s.pop();
+        int r2;
+
+        while (!q.empty()) {
+            r2 = q.dequeue();
+            if (r != r2) {
+                tmp.enqueue(r2);
+            }
+        }
+
+        if (!s.empty()) {
+            r = s.pop();
+        }
+
+        while (!tmp.empty()) {
+            r2 = tmp.dequeue();
+            if (r != r2) {
+                q.enqueue(r2);
+            }
+        }
     }
 }
 
@@ -65,7 +94,7 @@ int main() {
     q.enqueue(34);
     q.enqueue(69);
 
-    remove(q, s);
+    remove_ex(q, s);
 
     while (!q.empty()) {
         std::println("{}", q.dequeue());

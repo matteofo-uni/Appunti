@@ -1,1 +1,1 @@
-g++ -std=c++23 -o $1 list.cpp queue.cpp stack.cpp $1.cpp
+g++ -std=c++23 -o $1.out list.cpp queue.cpp stack.cpp $1.cpp -g

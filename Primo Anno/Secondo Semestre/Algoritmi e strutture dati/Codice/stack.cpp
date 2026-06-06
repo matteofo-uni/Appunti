@@ -4,8 +4,6 @@ Stack::Stack() {
     this->head = nullptr;
 }
 
-#ifndef STACK_ARRAY_IMPL
-
 bool Stack::empty() {
     return this->head == nullptr;
 }
@@ -34,7 +32,3 @@ int Stack::pop() {
 
     return value;
 }
-
-#else
-
-#endif
