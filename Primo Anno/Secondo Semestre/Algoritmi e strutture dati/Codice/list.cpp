@@ -1,0 +1,5 @@
+#include "list.hpp"
+
+Node::Node(int value) {
+    this->value = value;
+}
