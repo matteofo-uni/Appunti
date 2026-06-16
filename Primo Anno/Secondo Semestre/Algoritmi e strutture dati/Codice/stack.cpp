@@ -32,3 +32,24 @@ int Stack::pop() {
 
     return value;
 }
+
+Stack& Stack::from_array(int arr[], int n) {
+    Stack* s = new Stack();
+    
+    for (int i = 0; i < n; i++) {
+        s->push(arr[i]);
+    }
+
+    return *s;
+}
+
+
+Stack& Stack::from_array_reversed(int arr[], int n) {
+    Stack* s = new Stack();
+    
+    for (int i = n - 1; i >= 0; i--) {
+        s->push(arr[i]);
+    }
+
+    return *s;
+}

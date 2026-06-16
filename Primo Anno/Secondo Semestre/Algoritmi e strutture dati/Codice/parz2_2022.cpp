@@ -52,5 +52,8 @@ int main() {
         std::println("{}", stack.pop());
     }
 
+    int a = 20;
+    a %= 10;
+
     return 0;
 }

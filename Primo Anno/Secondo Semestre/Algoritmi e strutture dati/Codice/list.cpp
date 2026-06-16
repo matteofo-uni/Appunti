@@ -5,6 +5,10 @@ Node::Node(int value) {
     this->next = nullptr;
 }
 
+Node::~Node() {
+   
+}
+
 Node* Node::list_from_array(int arr[], int n) {
     if (n <= 0) return nullptr;
 
